@@ -5,31 +5,12 @@
  * '1 и 6.45, -2, но 8, а затем 15, то есть 2.7 и -1028' => { min: -1028, max: 15 }
  */
 function getMinMax(string) {
-  const result = {
-    min: Infinity,
-    max: -Infinity
+  const numbers = string.match(/[+-]?\d+[.]?\d*/g);
+
+  return {
+    min: Math.min.apply(null, numbers),
+    max: Math.max.apply(null, numbers)
   };
-
-  for (let i = 0; i < string.length;) {
-    let number = NaN;
-
-    // Пропускаем несколько первых символов, пока не получим число.
-    for (; isNaN(number) && (i < string.length); ++i) {
-      number = parseFloat(string.slice(i));
-    }
-
-    if (!isNaN(number)) {
-      result.min = Math.min(number, result.min);
-      result.max = Math.max(number, result.max);
-
-      // Получили число, но все его суффиксы тоже числа. Их нужно пропустить, так что ждем, пока не получим не число
-      for (; !isNaN(number) && (i < string.length) && (string[i] !== ' '); ++i) {
-        number = parseFloat(string.slice(i));
-      }
-    }
-  }
-
-  return result;
 }
 
 /* ============================================= */
@@ -43,11 +24,8 @@ function fibonacciSimple(x) {
   if (x === 0 || x === 1) {
     return x;
   }
-  if (x > 1) {
-    return fibonacciSimple(x - 1) + fibonacciSimple(x - 2);
-  }
 
-  return undefined;
+  return fibonacciSimple(x - 1) + fibonacciSimple(x - 2);
 }
 
 /* ============================================= */
@@ -71,12 +49,8 @@ function fibonacciWithCache(x) {
       return cache[key];
     }
 
-    if (n > 1) {
-      cache[key] = findFibonacciNumber(n - 1) + findFibonacciNumber(n - 2);
-      return cache[key];
-    }
-
-    return undefined;
+    cache[key] = findFibonacciNumber(n - 1) + findFibonacciNumber(n - 2);
+    return cache[key];
   }
 
   return findFibonacciNumber(x);
@@ -101,8 +75,7 @@ function fibonacciWithCache(x) {
  */
 function printNumbers(max, cols) {
   let result = '';
-  const eps = 0.001;
-  const rows = Math.ceil((max + 1) / cols - eps);
+  const rows = Math.ceil((max + 1) / cols);
 
   for (let i = 0; i < rows; ++i) {
     for (let j = 0; i + j * rows <= max; ++j) {
@@ -136,7 +109,7 @@ function rle(input) {
   for (let i = 0; i < input.length; ++i) {
     if (input[i] !== last) {
       result += last;
-      result += (counter === 1) ? '' : String(counter);
+      result += (counter === 1) ? '' : counter;
       counter = 0;
     }
 
@@ -145,7 +118,7 @@ function rle(input) {
   }
 
   result += last;
-  result += (counter === 1) ? '' : String(counter);
+  result += (counter === 1) ? '' : counter;
 
   return result;
 }
