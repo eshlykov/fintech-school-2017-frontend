@@ -18,12 +18,5 @@
     "eslint-plugin-react": "^7.3.0",
     "expect.js": "^0.3.1",
     "mocha": "^3.5.0"
-  },
-  "devDependencies": {
-<<<<<<< HEAD
-    "babel-eslint": "^8.0.0"
-=======
-    "babel-eslint": "^8.0.1"
->>>>>>> 114e2439f402a381a483e84d15cd1f3945e3739a
   }
 }
