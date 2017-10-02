@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run --silent unit-tests && npm run --silent lint",
-    "lint": "eslint ./01/tasks.js",
-    "unit-tests": "mocha --reporter=spec ./01/test.js"
+    "lint": "eslint ./02/tasks.js",
+    "unit-tests": "mocha --reporter=spec ./02/test.js"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +20,10 @@
     "mocha": "^3.5.0"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "babel-eslint": "^8.0.0"
+=======
+    "babel-eslint": "^8.0.1"
+>>>>>>> 114e2439f402a381a483e84d15cd1f3945e3739a
   }
 }
