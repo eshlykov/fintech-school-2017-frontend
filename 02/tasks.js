@@ -3,10 +3,10 @@
  * Доп. задание: предложите несколько вариантов решения.
  */
 function timer(logger = console.log) {
-  for (var i = 0; i < 10; i++) {
-    setTimeout(() => {
-      logger(i);
-    }, 100);
+  for (let i = 0; i < 10; ++i) {
+    setTimeout(x => {
+      logger(x);
+    }, 100, i);
   }
 }
 
@@ -20,7 +20,9 @@ function timer(logger = console.log) {
  * @return {Function} функция с нужным контекстом
  */
 function customBind(func, context, ...args) {
-
+  return function binded(...added) {
+    return func.apply(context, args.concat(added));
+  };
 }
 
 /*= ============================================ */
@@ -32,20 +34,29 @@ function customBind(func, context, ...args) {
  * sum :: Number -> sum
  * sum :: void -> Number
  */
-function sum(x) {
-  return 0;
+function sum(...args) {
+  let currentSum = 0;
+
+  return (function count(...next) {
+    if (next.length === 0) {
+      return currentSum;
+    }
+
+    currentSum += next[0];
+    return count;
+  }(...args));
 }
 
 /*= ============================================ */
 
 /**
- * Определите, являются ли строчки анаграммами (например, “просветитель” — “терпеливость”).
+ * Определите, являются ли строчки анаграммами (например, “” — “терпеливость”).
  * @param {string} first
  * @param {string} second
  * @return {boolean}
  */
 function anagram(first, second) {
-  return false;
+  return first.split('').sort().join() === second.split('').sort().join();
 }
 
 /*= ============================================ */
@@ -57,7 +68,8 @@ function anagram(first, second) {
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
 function getUnique(arr) {
-  return [];
+  return arr.reduce((uniques, current) => (uniques.indexOf(current) === -1 ? uniques.concat(current) : uniques), [])
+    .sort((a, b) => a - b);
 }
 
 /**
@@ -67,7 +79,8 @@ function getUnique(arr) {
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
 function getIntersection(first, second) {
-  return [];
+  return first.filter(value => second.indexOf(value) !== -1)
+    .sort((a, b) => a - b);
 }
 
 /* ============================================= */
@@ -86,9 +99,12 @@ function getIntersection(first, second) {
  * @return {boolean}
  */
 function isIsomorphic(left, right) {
+  const leftArr = left.split('');
+  const rightArr = right.split('');
 
+  return (left.length === right.length)
+    && (leftArr.map((char, index) => char !== rightArr[index]).reduce((total, current) => total + current) <= 1);
 }
-
 module.exports = {
   timer,
   customBind,
