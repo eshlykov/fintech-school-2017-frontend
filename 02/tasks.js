@@ -73,7 +73,7 @@ function anagram(first, second) {
   [...first].forEach(char => { chars[char] = (chars[char] || 0) + 1; });
   [...second].forEach(char => { chars[char] = (chars[char] || 0) - 1; });
 
-  return Object.values(chars).every(number => number === 0);
+  return Object.keys(chars).map(key => chars[key]).every(number => number === 0);
 }
 
 /*= ============================================ */
