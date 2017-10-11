@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run --silent unit-tests && npm run --silent lint",
-    "lint": "eslint ./02/tasks.js",
-    "unit-tests": "mocha --reporter=spec ./02/test.js"
+    "lint": "eslint ./03/*/task.js",
+    "unit-tests": "mocha --reporter=spec ./03/*/test.js"
   },
   "author": "",
   "license": "ISC",

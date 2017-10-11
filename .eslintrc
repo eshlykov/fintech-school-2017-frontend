@@ -31,7 +31,7 @@
       }
     ],
     "no-restricted-imports": [1,  "lodash", "crypto", "bluebird", "setimmediate2"],
-    "no-var": 0,
+    "no-var": 2,
     "no-loop-func": 1,
     "no-shadow": 1,
     "vars-on-top": 0,
