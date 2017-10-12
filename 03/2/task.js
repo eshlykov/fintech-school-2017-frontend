@@ -9,8 +9,11 @@
 */
 function rejectOnTimeout(promise, timeoutInMilliseconds) {
   return new Promise((resolve, reject) => {
-    setTimeout(() => reject('timeout_error'), timeoutInMilliseconds);
-    promise.then(resolve, reject);
+    const timeout = setTimeout(() => { reject('timeout_error'); }, timeoutInMilliseconds);
+
+    promise
+      .then(resolve, reject)
+      .then(() => { clearTimeout(timeout); });
   });
 }
 

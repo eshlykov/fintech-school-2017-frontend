@@ -22,16 +22,17 @@ function fromRoman(str) {
   if (rest === '') {
     return result;
   }
-  return undefined;
+  return 0;
 }
 
 Object.setPrototypeOf(Number.prototype, new Proxy(Object.getPrototypeOf(Number.prototype), {
   get: (target, property) => {
+    if (property in target) {
+      return target[property];
+    }
+
     const length = fromRoman(property);
 
-    if (isFinite(length)) {
-      return Array.from(new Array(length), (value, index) => index);
-    }
-    return undefined;
+    return Array.from(new Array(length), (value, index) => index);
   }
 }));
