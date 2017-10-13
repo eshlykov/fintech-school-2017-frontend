@@ -4,9 +4,11 @@
   "description": "Homeworks for frontend part of tinkoff fintech 3 school",
   "main": "index.js",
   "scripts": {
-    "test": "npm run --silent unit-tests && npm run --silent lint",
-    "lint": "eslint ./03/*/task.js",
-    "unit-tests": "mocha --reporter=spec ./03/*/test.js"
+    "test": "npm run lint-html && npm run lint-css",
+    "lint": "eslint ./04/*/task.js",
+    "lint-html": "node html-validator.js ./04/**/*.html",
+    "lint-css": "stylelint ./04/**/*.css",
+    "unit-tests": "mocha --reporter=spec ./04/*/test.js"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +22,9 @@
     "mocha": "^3.5.0"
   },
   "devDependencies": {
-    "babel-eslint": "^8.0.1"
+    "html-validator": "^2.2.3",
+    "babel-eslint": "^8.0.1",
+    "stylelint": "^8.2.0",
+    "stylelint-config-standard": "^17.0.0"
   }
 }
