@@ -1,78 +1,78 @@
 table.foods {
-	width: 800px;
-	border : 0;
-	text-align: center;
-	margin: 0 auto;
-	border-spacing: 0;
-	table-layout: fixed;
+  width: 800px;
+  border: 0;
+  text-align: center;
+  margin: 0 auto;
+  border-spacing: 0;
+  table-layout: fixed;
 }
 
 .foods td {
-	width: 20%;
-	padding: 8px;
+  width: 20%;
+  padding: 8px;
 }
 
 .foods td:nth-child(1) {
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .foods thead td {
-	background-color: #c0c0ff;
-	border-bottom: 1px solid #000000;
+  background-color: #c0c0ff;
+  border-bottom: 1px solid #000;
 }
 
 .foods thead tr:hover td {
-	background-color: #8080ff;
+  background-color: #8080ff;
 }
 
 .foods tbody tr:nth-child(2n) td {
-	background-color: #ffc0c0;
+  background-color: #ffc0c0;
 }
 
 .foods tbody tr:nth-child(2n):hover td {
-	background-color: #ff8080;
+  background-color: #ff8080;
 }
 
 .foods tbody tr:nth-child(2n+1) td {
-	background-color: #c0ffc0;
+  background-color: #c0ffc0;
 }
 
 .foods tbody tr:nth-child(2n+1):hover td {
-	background-color: #80ff80;
+  background-color: #80ff80;
 }
 
 table.piggy {
-	border : 0;
-	border-spacing: 8px;
-	margin: 0 auto;
+  border: 0;
+  border-spacing: 8px;
+  margin: 0 auto;
 }
 
 .piggy td {
-	padding: 8px;
+  padding: 8px;
 }
 
 .piggy td:nth-child(1) {
-	background-color: #3fc083;
+  background-color: #3fc083;
 }
 
 .piggy td:nth-child(2) {
-	background-color: #35cd9b;
+  background-color: #35cd9b;
 }
 
 .piggy td:nth-child(3) {
-	background-color: #2cdabc;
+  background-color: #2cdabc;
 }
 
 .piggy td:nth-child(4) {
-	background-color: #29e7e6;
+  background-color: #29e7e6;
 }
 
 .piggy td:nth-child(5) {
-	background-color: #27cdf2;
+  background-color: #27cdf2;
 }
 
 .piggy td:nth-child(6) {
-	background-color: #28aafc;
+  background-color: #28aafc;
 }
