@@ -1,29 +1,91 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-    <meta charset="utf-8">
-    <title>Задание 4</title>
-</head>
-<body>
-<h1>Сделать страничку с произвольным контентом и выполнить следующие задания:</h1>
-<ul>
-    <li> Подцепить шрифты Roboto и Roboto Condensed;</li>
-    <li> Заголовки должны быть Roboto Condensed, все остальное - Roboto;</li>
-    <li> Весь контент должен ограничиваться по ширине на 960px и быть по центру страницы;</li>
-    <li> Заголовок первого порядка - "Блог обо мне";</li>
-    <li> После заголовка первого порядка  Абцаз текста - анонс;</li>
-    <li> Меню с якорями на нижеследующие разделы (2, 3);</li>
-    <li> У каждого подраздела свой Подзаголовок;</li>
-    <li> После каждого Подзаголовка Абцаз текста - анонс но с меньшим кеглем;</li>
-    <li> После анонса в подразделе 2-3 абзаца просто текста;</li>
-    <li> Внутри одного раздела картинка с описанием на случай, если она не загрузится;</li>
-    <li> Внутри другого видео с youtube;</li>
-    <li> В конце страницы яндекс/гугл карта с меткой;</li>
-    <li> И видео, и карта должны быть на всю ширину контейнера и вне зависимости от размеров окна сохранять пропорции 16/9;</li>
-    <li> Внутри абзацев текста должны присутствовать слова повышенной важности, которые нужно соответствующие выделять,
-        также должны присутствовать слова, которые необходимо выделить интонационно;</li>
-    <li> Также внутри текста расставить ссылки (1-2), стилизовать под разные состояния;</li>
-    <li> Итого - 2 вида головков, 3 вида абзацев, выделения strong и em, ссылки, изображения, айфреймы с youtube, картой.</li>
-</ul>
-</body>
+	<head>
+		<meta charset="utf-8">
+		<title>Задание 4</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Roboto Condensed' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+	</head>
+	<body>
+		<header>
+			<h1>Блог обо мне</h1>
+			<div class="announce main">Анонс блога обо мне.</div>
+		</header>
+		<nav>
+			<menu>
+				<li>
+					<a href="#article-1">Раздел с текстом</a>
+				</li>
+				<li>
+					<a href="#article-2">Раздел с картинкой</a>
+				</li>
+				<li>
+					<a href="#article-3">Раздел с видео</a>
+				</li>
+			</menu>
+		</nav>
+		<article id="article-1">
+			<h2>Раздел с текстом</h2>
+			<div class="announce">Анонс раздела с текстом.</div>
+			<div>
+				<ul>
+					<li> Подцепить шрифты Roboto и Roboto Condensed;</li>
+					<li> Заголовки должны быть Roboto Condensed, все остальное - Roboto;</li>
+					<li> Весь контент должен ограничиваться по ширине на 960px и быть по центру страницы;</li>
+					<li> Заголовок первого порядка - "Блог обо мне";</li>
+					<li> После заголовка первого порядка  Абцаз текста - анонс;</li>
+					<li> Меню с якорями на нижеследующие разделы (2, 3);</li>
+					<li> У каждого подраздела свой Подзаголовок;</li>
+					<li> После каждого Подзаголовка Абцаз текста - анонс но с меньшим кеглем;</li>
+					<li> После анонса в подразделе 2-3 абзаца просто текста;</li>
+					<li> Внутри одного раздела картинка с описанием на случай, если она не загрузится;</li>
+					<li> Внутри другого видео с youtube;</li>
+					<li> В конце страницы яндекс/гугл карта с меткой;</li>
+					<li> И видео, и карта должны быть на всю ширину контейнера и вне зависимости от размеров окна сохранять пропорции 16/9;</li>
+					<li> Внутри абзацев текста должны присутствовать слова повышенной важности, которые нужно соответствующие выделять,
+						также должны присутствовать слова, которые необходимо выделить интонационно;</li>
+					<li> Также внутри текста расставить ссылки (1-2), стилизовать под разные состояния;</li>
+					<li> Итого - 2 вида головков, 3 вида абзацев, выделения strong и em, ссылки, изображения, айфреймы с youtube, картой.</li>
+				</ul>
+				<p>
+					<a href="https://en.wikipedia.org/wiki/Lorem_ipsum">Lorem ipsum</a> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna <strong>aliqua</strong>. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+				<p>
+					Lorem ipsum dolor sit amet, <em>consectetur</em> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim <strong>veniam</strong>, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit <strong>esse</strong> cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+			</div>
+		</article>
+		<article id="article-2">
+			<h2>Раздел с картинкой</h2>
+			<div class="announce">Анонс раздела с картиной.</div>
+			<div>
+				<p>
+					<a href="https://ru.wikipedia.org/wiki/Lorem_ipsum">Lorem ipsum</a> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore <strong>et dolore</strong> magna aliqua. Ut enim ad minim veniam, <em>quis</em> nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, <strong>sunt in</strong> culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+				<img src="images/sample.jpg" alt="Картинка-образец">
+			</div>
+		</article>
+		<article id="article-3">
+			<h2>Раздел с видео</h2>
+			<div class="announce">Анонс раздела с видео.</div>
+			<div>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis</em> nostrud exercitation ullamco laboris nisi ut aliquip ex ea <strong>commodo</strong> consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, <em>sunt</em> in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+				<div class="wrapper-16-9">
+					<iframe class="media" src="https://www.youtube.com/embed/SMaVOcLHygE">
+					</iframe>
+				</div>
+			</div>
+		</article>
+		<footer>
+			<h3>Карта</h3>
+			<div class="wrapper-16-9">
+				<iframe class="media" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAJvlgbaAMIa8z9j9Nb1EMfDLFxGubxSQg&q=Space+Needle,Seattle+WA">
+				</iframe>
+			</div>
+		</footer>
+	</body>
 </html>

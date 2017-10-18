@@ -1,0 +1,63 @@
+body {
+	width: 960px;
+	margin: 0 auto;
+	font-family: 'Roboto', sans-serif;
+	font-size: 12pt;
+	padding-top: 50px;
+	padding-bottom: 100px;
+}
+
+article {
+	margin-top: 30px;
+	padding-bottom: 20px;
+	margin-bottom: 50px;
+	border-bottom: 1px solid #c0c0c0;
+}
+
+h1,
+h2,
+h3 {
+	font-family: 'Roboto Condesed', sans-serif;
+}
+
+.announce.main {
+	font-size: 16pt;
+}
+
+.announce {
+	font-size: 14pt;
+}
+
+a:link {
+	color: #6060c0;
+}
+
+a:visited {
+	color: #c060c0;
+}
+
+a:hover {
+	color: #606060;
+}
+
+a:active {
+	color: #c06060;
+}
+
+img {
+	display: block;
+	width: 80%;
+	margin: 0 auto;
+}
+
+div.wrapper-16-9 {
+    width: 100%;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+
+div.wrapper-16-9 > .media {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
