@@ -1,0 +1,27 @@
+ul {
+  list-style: none;
+}
+
+ol {
+  list-style: none;
+  counter-reset: counter;
+}
+
+li::before {
+  display: inline-block;
+  text-align: center;
+  width: 40px;
+  content: "•";
+  margin-left: -40px;
+}
+
+ul > li::before {
+  content: "•";
+  color: #ffff40;
+}
+
+ol > li::before {
+  content: counter(counter);
+  counter-increment: counter;
+  color: #4040ff;
+}
