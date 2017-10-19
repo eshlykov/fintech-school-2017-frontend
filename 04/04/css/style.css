@@ -17,14 +17,17 @@ article {
 h1,
 h2,
 h3 {
-  font-family: 'Roboto Condesed', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
-.announce.main {
+p.announce.main {
   font-size: 16pt;
 }
 
-.announce {
+p.announce {
+  display: block;
+  background-color: #eee;
+  padding: 10px;
   font-size: 14pt;
 }
 
