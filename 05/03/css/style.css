@@ -12,11 +12,11 @@ body {
   align-items: flex-start;
   flex-wrap: wrap;
   border: solid 1px #dddfe0;
-  border-radius: 6px;
   padding: 12px 18px;
   font-family: Roboto, sans-serif;
   font-size: 13px;
   color: #333;
+  border-radius: 6px;
   list-style: none;
 }
 
@@ -27,13 +27,13 @@ body {
   align-items: flex-start;
   max-width: 252px;
   height: 14px;
-  border-radius: 6px;
   padding:  14px 36px 14px 12px;
   margin: 6px 0;
   overflow: hidden;
   text-overflow: clip;
   white-space: nowrap;
   background-color: #eef2f7;
+  border-radius: 6px;
 }
 
 .tags-item-insert {
