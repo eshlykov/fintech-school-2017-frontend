@@ -14,7 +14,7 @@ body {
   position: absolute;
   margin-left: -34px;
   margin-top: -86px;
-  clip: rect(86px,576px,499px,34px);
+  clip: rect(86px, 576px, 499px, 34px);
 }
 
 .banner-container {

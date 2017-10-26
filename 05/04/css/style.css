@@ -18,12 +18,11 @@ body {
   margin-bottom: 24px;
 }
 
-
 .form-text {
   display: flex;
   align-self: stretch;
   height: 20px;
-  padding: 32px 18px 14px 18px;
+  padding: 32px 18px 14px;
   border: 0;
   font-family: Roboto, sans-serif;
   font-size: 17px;
@@ -62,7 +61,7 @@ body {
   bottom: 0;
   display: none;
   height: 15px;
-  margin: 11px 0 4px 0;
+  margin: 11px 0 4px;
   font-family: Roboto;
   font-size: 13px;
   color: #d0021b;
@@ -111,7 +110,7 @@ body {
   font-size: 13px;
   line-height: 1.38;
   color: #9299a2;
-  background-color: #ffffff;
+  background-color: #fff;
   border: solid 1px #dddfe0;
 }
 
@@ -120,7 +119,7 @@ body {
 }
 
 .form-radio-header {
-  margin: 15px auto 27px auto;
+  margin: 15px auto 27px;
   font-family: Roboto, sans-serif;
   font-size: 21px;
   font-weight: 300;
@@ -141,7 +140,7 @@ body {
   justify-content: space-between;
   width: 220px;
   height: 64px;
-  padding: 0px 18px;
+  padding: 0 18px;
   border: solid 1px #dddfe0;
   font-family: Roboto, sans-serif;
   font-size: 17px;
@@ -205,7 +204,7 @@ body {
   width: 258px;
   height: 66px;
   border: 0;
-  margin: 50px 0 0 0;
+  margin: 50px 0 0;
   font-family: Roboto, sans-serif;
   font-size: 17px;
   color: #333;
