@@ -6,8 +6,8 @@
   "scripts": {
     "test": "npm run lint-html && npm run lint-css",
     "lint": "eslint ./04/*/task.js",
-    "lint-html": "node html-validator.js ./05/**/*.html",
-    "lint-css": "stylelint ./05/**/*.css",
+    "lint-html": "node html-validator.js ./06/*.html",
+    "lint-css": "stylelint ./06/*.less",
     "unit-tests": "mocha --reporter=spec ./05/*/test.js"
   },
   "author": "",
