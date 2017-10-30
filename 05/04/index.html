@@ -1,18 +1,53 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Задание 5.4</title>
-</head>
-<body>
-<h1>Сверстать форму. Pixel-perfect. Select делать не нужно</h1>
-<p>
-    Подробности по ссылке:
-    <a href="https://app.zeplin.io/project/58a307271a9f6d513890adc8/screen/58a3075a4ec334e848d7f333">
-        https://app.zeplin.io/project/58a307271a9f6d513890adc8/screen/58a3075a4ec334e848d7f333
-    </a>, для того чтобы получить доступ, нужно зарегестрироваться на
-    <a href="https://zeplin.io/">zeplin.io</a>, и попросить доступ у Евгения Мамаева.
-</p>
-<img src="./task.png" alt="">
-</body>
+<!doctype html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Форма</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <form class="form-container">
+      <label class="form-text-wrapper"  for="form-name">
+        <input id="form-name" class="form-text" type="text" name="name" required>
+        <span class="form-text-hint">ФИО</span>
+        <img class="form-image-arrow" src="img/line-copy-5.svg" alt="Раскрыть">
+      </label>
+      <label class="form-text-wrapper" for="form-city">
+        <input id="form-city" class="form-text failed" type="text" name="city" required>
+        <img class="form-image-info error" src="img/stroke-1-copy-2-fill-2-copy-2-stroke-1-copy-2.svg" alt="Ошибка">
+        <span class="form-text-hint">Город проживания</span>
+        <span class="form-text-error-message">Для заполнения этого поля не допустимо использовать буквы латинского алфавита</span>
+      </label>
+      <label class="form-text-wrapper" for="form-phone">
+        <input id="form-phone" class="form-text" type="text" name="phone" required>
+        <span class="form-text-hint">Мобильный телефон</span>
+      </label>
+      <label class="form-text-wrapper" for="form-email">
+        <input id="form-email" class="form-text" type="text" name="email" required>
+        <span class="form-text-hint">Электронная почта</span>
+        <img class="form-image-info" src="img/stroke-1-fill-2-copy-2.svg" alt="Информация">
+        <span class="form-text-info">
+          Ваши данные замаскированы в целях безопасности. Для изменения информации с вами свяжется оператор колл-центра.
+        </span>
+      </label>
+      <h3 class="form-radio-header">Выберите это или другое</h3>
+      <div class="form-radio-container">
+        <label class="form-radio-label">
+          <input id="what-on" class="form-radio" type="radio" name="what" value="on" checked required>
+          <span class="form-radio-text">Это</span>
+          <span class="form-radio-exterior"></span>
+          <span class="form-radio-interior"></span>
+        </label>
+        <label class="form-radio-label" for="what-off">
+          <input id="what-off" class="form-radio" type="radio" name="what" value="off" required>
+          <span class="form-radio-text">Другое</span>
+          <span class="form-radio-exterior"></span>
+          <span class="form-radio-interior"></span>
+        </label>
+      </div>
+      <input class="form-button" type="submit">
+    </form>
+  </body>
 </html>

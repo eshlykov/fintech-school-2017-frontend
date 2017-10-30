@@ -1,0 +1,57 @@
+body {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+.banner {
+  display: flex;
+  width: 1080px;
+  height: 413px;
+  background-image: linear-gradient(to right, #1489e7, #003e82);
+}
+
+.cards {
+  position: absolute;
+  margin-left: -34px;
+  margin-top: -86px;
+  clip: rect(86px, 576px, 499px, 34px);
+}
+
+.banner-container {
+  display: flex;
+  flex-direction: column;
+  padding: 91px 0 74px 14px;
+  margin-left: 542px;
+}
+
+.banner-header {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 50px;
+  font-weight: 100;
+  line-height: 1;
+  color: #fff;
+}
+
+.banner-description {
+  margin-top: 18px;
+  margin-bottom: 20px;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.banner-button {
+  height: 62px;
+  width: 212px;
+  border: 0;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 17px;
+  line-height: 1.41;
+  color: #333;
+  text-align: center;
+  background-color: #ffdd2d;
+  border-radius: 6px;
+}
