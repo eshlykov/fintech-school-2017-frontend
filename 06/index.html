@@ -46,11 +46,46 @@
       <li class="tags__item_editable" contenteditable></li>
     </ul>
     <h2 class="subheader_form">Заполните несколько простых полей</h2>
+    <form class="form">
+      <label class="form-text"  for="form-name">
+        <input id="form-name" class="form-text__input" type="text" name="name" required>
+        <span class="form-text__hint">ФИО</span>
+      </label>
+      <label class="form-text" for="form-city">
+        <input id="form-city" class="form-text__input" type="text" name="city" required>
+        <span class="form-text__hint">Город проживания</span>
+      </label>
+      <label class="form-text" for="form-phone">
+        <input id="form-phone" class="form-text__input" type="text" name="phone" required>
+        <span class="form-text__hint">Мобильный телефон</span>
+      </label>
+      <label class="form-text" for="form-email">
+        <input id="form-email" class="form-text__input" type="text" name="email" required>
+        <span class="form-text__hint">Электронная почта</span>
+      </label>
+      <h3 class="form-subheader">Выберите это или другое</h3>
+      <div class="form-radio-wrapper">
+        <label class="form-radio">
+          <span class="form-radio__text">Это</span>
+          <input id="what-on" class="form-radio__input" type="radio" name="what" value="on" checked required>
+        </label>
+        <label class="form-radio" for="what-off">
+          <span class="form-radio__text">Другое</span>
+          <input id="what-off" class="form-radio__input" type="radio" name="what" value="off" required>
+        </label>
+      </div>
+      <input class="form-button" type="submit">
+    </form>
   </body>
   <!-- TODO
     Добавить &nbsp
     Добавить примеси
     Чекнуть font-weight в description
     Чекнуть pixel-perfect
+    Анимация
+    Стили кнопки при наведении и нажатии
+    Убрать for
+    Курсор ручка
+    Отключить дефолтную рамочку для форм
   -->
 </html>
