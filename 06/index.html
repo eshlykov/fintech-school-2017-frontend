@@ -12,18 +12,20 @@
       <img class="header__logo" src="img/tinkoff.svg" alt="Тинькофф Банк">
       <div class="header__phone">8 800 555-11-22</div>
     </header>
-    <ul class="menu">
-      <li class="menu__item">Карты</li>
-      <li class="menu__item">Вклады</li>
-      <li class="menu__item">Платежи и переводы</li>
-      <li class="menu__item">Бонусы</li>
-      <li class="menu__item">Страхование</li>
-      <li class="menu__item">О банке</li>
-    </ul>
+    <nav class="nav">
+      <ul class="menu">
+        <li class="menu__item">Карты</li>
+        <li class="menu__item">Вклады</li>
+        <li class="menu__item">Платежи и переводы</li>
+        <li class="menu__item">Бонусы</li>
+        <li class="menu__item">Страхование</li>
+        <li class="menu__item">О банке</li>
+      </ul>
+    </nav>
     <div class="wrapper">
       <div class="main-message">
-        <h1 class="main-message__header">Карты для вас<br>прямо сейчас</h1>
-        <p class="main-message__description">Выбирайте карту, пользуйтесь<br>удобными сервисами</p>
+        <h1 class="main-message__header">Карты для вас прямо сейчас</h1>
+        <p class="main-message__description">Выбирайте карту, пользуйтесь</br>удобными сервисами</p>
         <button class="main-message__button">Оформить заявку</button>
       </div>
     </div>
@@ -64,9 +66,9 @@
         <input class="form-text__input" type="text" name="email" required>
         <span class="form-text__hint">Электронная почта</span>
         <span class="form-text__icon"></span>
-        <span class="form-text__helping-message">Ваши данные замаскированы в целях безопасности. Для изменения информации с вами свяжется оператор колл-центра.</span>
+        <span class="form-text__helping-message">Ваши данные замаскированы в&nbsp;целях безопасности. Для изменения информации с&nbsp;вами свяжется оператор колл-центра.</span>
       </label>
-      <h3 class="form-subheader">Выберите это или другое</h3>
+      <h3 class="form-subheader">Выберите это&nbsp;или другое</h3>
       <div class="form-radio-wrapper">
         <label class="form-radio">
           <input class="form-radio__input" type="radio" name="what" value="on" checked required>
@@ -83,7 +85,7 @@
     </form>
   </body>
   <!-- TODO
-    Добавить &nbsp
+    Добавить переменные
     Добавить примеси border-radius
     Чекнуть font-weight в description
     Чекнуть pixel-perfect
@@ -91,6 +93,7 @@
     Стили кнопки при наведении и нажатии
     Курсор ручка
     Сделать max-width
+    Сделать цвет кнопочке разный
     Не забыть убрать все TODO
   -->
 </html>
