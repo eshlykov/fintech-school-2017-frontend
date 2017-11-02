@@ -39,6 +39,7 @@ body {
   &__logo {
     width: 197px;
     height: 65px;
+    background-image: url('../img/logo.svg');
   }
 
   &__phone {
@@ -62,9 +63,9 @@ body {
   display: flex;
   align-items: stretch;
   justify-content: space-between;
-  max-width: 852px;
+  max-width: 864px;
   height: 100%;
-  padding: 0 12px;
+  padding: 0 18px;
   margin: 0 auto;
   list-style: none;
 
@@ -166,6 +167,7 @@ body {
   &,
   &_tags,
   &_form {
+    padding: 0 18px;
     font-family: Roboto, sans-serif;
     font-size: 50px;
     font-weight: 300;
@@ -175,21 +177,27 @@ body {
   }
 
   &_tags {
-    max-width: 829px;
+    max-width: 865px;
     margin: 82px auto 50px;
   }
 
   &_form {
-    max-width: 540px;
+    max-width: 576px;
     margin: 76px auto 67px;
   }
+}
+
+.tags-container {
+  max-width: 864px;
+  padding: 0 18px;
+  margin: 0 auto;
 }
 
 .tags {
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
-  max-width: 828px;;
+  width: 100%;
   padding: 12px 18px;
   border: solid 1px #dddfe0;
   margin: 0 auto;
@@ -251,10 +259,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  max-width: 540px;
+  max-width: 576px;
   margin: 0 auto 57px;
+  padding: 0 18px;
 }
-
 
 .form-text {
   &,
@@ -264,28 +272,21 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
     margin-bottom: 24px;
   }
 
   &__input {
     position: relative;
     display: flex;
-    align-self: stretch;
     height: 66px;
     padding: 32px 18px 14px;
     border: 0;
     font-family: Roboto, sans-serif;
     font-size: 17px;
     text-align: left;
-    color: #333;
+    color: @black;
     background-color: #eef2f7;
     border-radius: 6px;
-
-    &:focus {
-      border: solid 1px #dddfe0;
-      transition: border 0.1s ease-in;
-    }
   }
 
   &__hint {
@@ -398,12 +399,6 @@ body {
 
   &__input {
     display: none;
-    left: 210px;
-    width: 30px;
-    height: 30px;
-    margin: 0;
-    background-color: @black;
-    visibility: hidden;
   }
 
   &__text {
@@ -415,7 +410,7 @@ body {
 
   &__icon {
     position: absolute;
-    left: 210px;
+    right: 18px;
     display: flex;
     width: 30px;
     height: 30px;
@@ -466,4 +461,92 @@ body {
 }
 
 @media (max-width: 640px) {
+  .header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    padding: 0 89px 0 18px;
+
+    &__logo {
+      width: 50px;
+      height: 44px;
+      background-image: url('../img/logo-mobile.svg');
+    }
+
+    &__phone {
+      width: 140px;
+      height: 20px;
+      font-size: 17px;
+    }
+  }
+
+  .nav {
+    position: absolute;
+    top: 24px;
+    right: 18px;
+    width: 25px;
+    height: 20px;
+    background-image: url(../img/nav-mobile.svg);
+    background-color: @white;
+    cursor: pointer;
+  }
+
+  .menu {
+    display: none;
+
+    &__item {
+      display: none;
+    }
+  }
+
+  .subheader {
+
+    &_tags {
+      line-height: 1.2;
+      margin: 29px auto 24px;
+      font-size: 30px;
+    }
+
+    &_form {
+      line-height: normal;
+      margin: 52px auto 26px;
+      font-size: 24px;
+    }
+  }
+
+  .tags {
+
+    &__item {
+      max-width: 250px;
+
+      &::after {
+        left: 196px;
+      }
+    }
+  }
+
+  .form {
+    margin: 0 auto 60px;
+  }
+
+  .form-text {
+
+    &_error::after {
+      height: 30px;
+      margin: 11px 0 1px;
+    }
+  }
+
+  .form-radio-wrapper {
+    height: 156px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-radio,
+  .form-button {
+    width: 288px;
+  }
 }

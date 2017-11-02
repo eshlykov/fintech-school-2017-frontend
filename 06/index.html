@@ -2,6 +2,7 @@
 <html lang="ru" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Карты для вас прямо сейчас</title>
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css">
     <link rel="stylesheet/less" type="text/css" href="less/main.less">
@@ -9,7 +10,7 @@
   </head>
   <body>
     <header class="header">
-      <img class="header__logo" src="img/tinkoff.svg" alt="Тинькофф Банк">
+      <div class="header__logo"></div>
       <div class="header__phone">8 800 555-11-22</div>
     </header>
     <nav class="nav">
@@ -30,22 +31,24 @@
       </div>
     </div>
     <h2 class="subheader_tags">Любые категории платежей</h2>
-    <ul class="tags">
-      <li class="tags__item">Кафе</li>
-      <li class="tags__item_editable" contenteditable></li>
-      <li class="tags__item">Интернет</li>
-      <li class="tags__item_editable" contenteditable></li>
-      <li class="tags__item">Телефон</li>
-      <li class="tags__item_editable" contenteditable></li>
-      <li class="tags__item">Авто</li>
-      <li class="tags__item_editable" contenteditable></li>
-      <li class="tags__item">ЖКХ</li>
-      <li class="tags__item_editable" contenteditable></li>
-      <li class="tags__item">Одежда и обувь</li>
-      <li class="tags__item_editable" contenteditable></li>
-      <li class="tags__item">Супермаркеты, гастрономы, универмаги и к</li>
-      <li class="tags__item_editable" contenteditable></li>
-    </ul>
+    <div class="tags-container">
+      <ul class="tags">
+        <li class="tags__item">Кафе</li>
+        <li class="tags__item_editable" contenteditable></li>
+        <li class="tags__item">Интернет</li>
+        <li class="tags__item_editable" contenteditable></li>
+        <li class="tags__item">Телефон</li>
+        <li class="tags__item_editable" contenteditable></li>
+        <li class="tags__item">Авто</li>
+        <li class="tags__item_editable" contenteditable></li>
+        <li class="tags__item">ЖКХ</li>
+        <li class="tags__item_editable" contenteditable></li>
+        <li class="tags__item">Одежда и обувь</li>
+        <li class="tags__item_editable" contenteditable></li>
+        <li class="tags__item">Супермаркеты, гастрономы, универмаги и к</li>
+        <li class="tags__item_editable" contenteditable></li>
+      </ul>
+    </div>
     <h2 class="subheader_form">Заполните несколько простых полей</h2>
     <form class="form">
       <label class="form-text_select">
@@ -89,10 +92,7 @@
     Добавить примеси border-radius
     Чекнуть font-weight в description
     Чекнуть pixel-perfect
-    Анимация
     Стили кнопки при наведении и нажатии
-    Курсор ручка
-    Сделать max-width
     Сделать цвет кнопочке разный
     Не забыть убрать все TODO
   -->
