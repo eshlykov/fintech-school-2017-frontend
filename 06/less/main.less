@@ -102,7 +102,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  max-width: 100%;
   height: 413px;
   overflow: hidden;
   background-image: linear-gradient(to right, #1489e7, #003e82);
@@ -124,7 +123,6 @@ body {
   flex-direction: column;
   width: 538px;
   padding: 91px 0 74px 14px;
-  // margin-left: auto;
 
   &__header {
     width: 342px;
@@ -138,8 +136,7 @@ body {
 
   &__description {
     width: 326px;
-    margin-top: 18px;
-    margin-bottom: 20px;
+    margin: 18px 0px 20px;
     font-family: Roboto, sans-serif;
     font-size: 16px;
     line-height: 1.5;
@@ -498,6 +495,51 @@ body {
 
     &__item {
       display: none;
+    }
+  }
+
+  .wrapper {
+    justify-content: center;
+    height: 390px;
+    background-image: linear-gradient(179deg, #168de7, #00428a);
+
+    &::before {
+      position: absolute;
+      top: 84px;
+      right: auto;
+      max-width: 375px;
+      height: 306px;
+      margin: 0 auto;
+      background-image: url(../img/cards-mobile.png);
+      background-position: center 0;
+    }
+  }
+
+  .main-message {
+    z-index: 1;
+    align-items: center;
+    width: 252px;
+    padding: 0;
+    margin: 26px auto;
+
+    &__header {
+      width: 100%;
+      font-size: 30px;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    &__description {
+      width: 100%;
+      margin: 7px 0 141px;
+      font-size: 17px;
+      text-align: center;
+      line-height: 1.41;
+    }
+
+    &__button {
+      width: 252px;
+      height: 66px;
     }
   }
 
