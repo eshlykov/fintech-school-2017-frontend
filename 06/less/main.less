@@ -1,8 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
 
 @white: #fff;
+@yellow: #ffdd2d;
 @black: #333;
-@indent: 126px;
+@light-blue: #74a3c7;
+@blue: #eef2f7;
+@red: #d0021b;
+@dark-red: #d0011b;
+@grey: #3e4757;
+@light-grey: #9299a2;
+@light-grey-2: #dddfe0;
+@gradient-from: #1489e7;
+@gradient-to: #003e82;
+@gradient-mobile-from: #1489e7;
+@gradient-mobile-to: #003e82;
+@border-radius: 6px;
+@font: Roboto;
+@small-1: 13px;
+@medium-1: 16px;
+@medium-2: 17px;
+@large-1: 21px;
+@large-2: 24px;
+@large-3: 30px;
+@large-4: 50px;
 
 * {
   box-sizing: border-box;
@@ -34,19 +54,19 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 95px;
-  padding: 0 @indent;
+  padding: 0 126px;
 
   &__logo {
     width: 197px;
     height: 65px;
+    margin: auto 0;
     background-image: url('../img/logo.svg');
   }
 
   &__phone {
-    width: 173px;
     height: 21px;
-    font-family: Roboto, sans-serif;
-    font-size: 21px;
+    font-family: @font, sans-serif;
+    font-size: @large-1;
     line-height: 1;
     text-align: right;
     color: @black;
@@ -56,7 +76,7 @@ body {
 .nav {
   width: 100%;
   height: 65px;
-  background-color: #3e4757;
+  background-color: @grey;
 }
 
 .menu {
@@ -73,8 +93,8 @@ body {
     display: flex;
     align-items: center;
     position: relative;
-    font-family: Roboto, sans-serif;
-    font-size: 13px;
+    font-family: @font, sans-serif;
+    font-size: @small-1;
     letter-spacing: 0.9px;
     color: @white;
     text-transform: uppercase;
@@ -86,7 +106,7 @@ body {
       width: 0;
       height: 3px;
       margin-top: 22px;
-      background-color: #ffdd2d;
+      background-color: @yellow;
       content: '';
     }
 
@@ -104,7 +124,7 @@ body {
   justify-content: flex-end;
   height: 413px;
   overflow: hidden;
-  background-image: linear-gradient(to right, #1489e7, #003e82);
+  background-image: linear-gradient(to right, @gradient-from, @gradient-to);
 
   &::before {
     position: absolute;
@@ -127,20 +147,20 @@ body {
   &__header {
     width: 342px;
     margin: 0;
-    font-family: Roboto, sans-serif;
-    font-size: 50px;
+    font-family: @font, sans-serif;
+    font-size: @large-4;
     font-weight: 100;
     line-height: 1;
-    color: #fff;
+    color: @white;
   }
 
   &__description {
     width: 326px;
     margin: 18px 0px 20px;
-    font-family: Roboto, sans-serif;
-    font-size: 16px;
+    font-family: @font, sans-serif;
+    font-size: @medium-1;
     line-height: 1.5;
-    color: #fff;
+    color: @white;
   }
 
   &__button {
@@ -148,13 +168,13 @@ body {
     height: 62px;
     border: 0;
     margin: 0;
-    font-family: Roboto, sans-serif;
-    font-size: 17px;
+    font-family: @font, sans-serif;
+    font-size: @medium-2;
     line-height: 1.41;
     color: @black;
     text-align: center;
-    background-color: #ffdd2d;
-    border-radius: 6px;
+    background-color: @yellow;
+    border-radius: @border-radius;
     cursor: pointer;
   }
 }
@@ -165,21 +185,24 @@ body {
   &_tags,
   &_form {
     padding: 0 18px;
-    font-family: Roboto, sans-serif;
-    font-size: 50px;
+    font-family: @font, sans-serif;
+    font-size: @large-4;
     font-weight: 300;
-    line-height: 1.08;
     text-align: center;
     color: @black;
   }
 
   &_tags {
     max-width: 865px;
+    min-height: 58px;
     margin: 82px auto 50px;
+    padding-top: auto;
   }
 
   &_form {
     max-width: 576px;
+    min-height: 120px;
+    line-height: 1.08;
     margin: 76px auto 67px;
   }
 }
@@ -196,12 +219,12 @@ body {
   flex-wrap: wrap;
   width: 100%;
   padding: 12px 18px;
-  border: solid 1px #dddfe0;
+  border: solid 1px @light-grey-2;
   margin: 0 auto;
-  font-family: Roboto, sans-serif;
-  font-size: 13px;
-  color: #333;
-  border-radius: 6px;
+  font-family: @font, sans-serif;
+  font-size: @small-1;
+  color: @black;
+  border-radius: @border-radius;
   list-style: none;
 
   &__item {
@@ -216,8 +239,8 @@ body {
     overflow: hidden;
     text-overflow: clip;
     white-space: nowrap;
-    background-color: #eef2f7;
-    border-radius: 6px;
+    background-color: @blue;
+    border-radius: @border-radius;
 
     &::before {
       position: absolute;
@@ -238,7 +261,7 @@ body {
       left: 246px;
       height: 42px;
       width: 54px;
-      background-image: linear-gradient(to right, rgba(238, 242, 247, 0), #eef2f7 30px, #eef2f7);
+      background-image: linear-gradient(to right, rgba(238, 242, 247, 0), @blue 30px, @blue);
       content: '';
     }
 
@@ -276,25 +299,25 @@ body {
     position: relative;
     display: flex;
     height: 66px;
-    padding: 32px 18px 14px;
+    padding: 32px 48px 14px 18px;
     border: 0;
-    font-family: Roboto, sans-serif;
-    font-size: 17px;
+    font-family: @font, sans-serif;
+    font-size: @medium-2;
     text-align: left;
     color: @black;
-    background-color: #eef2f7;
-    border-radius: 6px;
+    background-color: @blue;
+    border-radius: @border-radius;
   }
 
   &__hint {
     position: absolute;
     left: 18px;
     top: 23px;
-    font-family: Roboto, sans-serif;
-    font-size: 17px;
+    font-family: @font, sans-serif;
+    font-size: @medium-2;
     text-align: left;
     opacity: 0.6;
-    color: #74a3c7;
+    color: @light-blue;
   }
 
   &__input:focus {
@@ -305,14 +328,14 @@ body {
   &__input:focus ~ &__hint,
   &__input:valid ~ &__hint {
     top: 12px;
-    font-size: 13px;
+    font-size: @small-1;
     transition: top font-size;
     transition-duration: 0.1s;
     transition-timing-function: ease-in;
   }
 
   &_select &__icon {
-    .hint-icon(33px, 29px, 8px, 4px, '../img/select.svg');
+    .hint-icon(33px, 18px, 8px, 4px, '../img/select.svg');
   }
 
   &_info &__icon {
@@ -326,13 +349,13 @@ body {
     width: 248px;
     height: 104px;
     padding: 16px;
-    border-radius: 6px;
-    font-family: Roboto, sans-serif;
-    font-size: 13px;
+    border-radius: @border-radius;
+    font-family: @font, sans-serif;
+    font-size: @small-1;
     line-height: 1.38;
-    color: #9299a2;
-    background-color: #fff;
-    border: solid 1px #dddfe0;
+    color: @light-grey;
+    background-color: @white;
+    border: solid 1px @light-grey-2;
     opacity: 0;
     ransition: opacity 0.1s ease-in;
   }
@@ -353,24 +376,39 @@ body {
     width: 100%;
     height: 15px;
     margin: 11px 0 4px;
-    font-family: Roboto, sans-serif;
-    font-size: 13px;
-    color: #d0021b;
+    font-family: @font, sans-serif;
+    font-size: @small-1;
+    color: @red;
     content: 'Для заполнения этого поля не допустимо использовать буквы латинского алфавита';
   }
 
   &_error &__input {
-    border: solid 1px #d0011b;
+    border: solid 1px @dark-red;
+  }
+
+  &__gradient {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    height: 64px;
+    width: 107px;
+    border-radius: @border-radius;
+    background-image: linear-gradient(to right, rgba(238, 242, 247, 0), @blue 59px, @blue);
+    content: '';
+  }
+
+  &__input:focus ~ &__gradient {
+    display: none;
   }
 }
 
 .form-subheader {
   margin: 15px auto 27px;
-  font-family: Roboto, sans-serif;
-  font-size: 21px;
+  font-family: @font, sans-serif;
+  font-size: @large-1;
   font-weight: 300;
   text-align: center;
-  color: #333;
+  color: @black;
 }
 
 .form-radio-wrapper {
@@ -387,11 +425,11 @@ body {
   width: 258px;
   height: 66px;
   padding: 0 18px;
-  border: solid 1px #dddfe0;
-  font-family: Roboto, sans-serif;
-  font-size: 17px;
-  color: #333;
-  border-radius: 6px;
+  border: solid 1px @light-grey-2;
+  font-family: @font, sans-serif;
+  font-size: @medium-2;
+  color: @black;
+  border-radius: @border-radius;
   cursor: pointer;
 
   &__input {
@@ -399,9 +437,9 @@ body {
   }
 
   &__text {
-    font-family: Roboto, sans-serif;
-    font-size: 17px;
-    color: #74a3c7;
+    font-family: @font, sans-serif;
+    font-size: @medium-2;
+    color: @light-blue;
     opacity: 0.6;
   }
 
@@ -411,14 +449,14 @@ body {
     display: flex;
     width: 30px;
     height: 30px;
-    background-color: #eef2f7;
+    background-color: @blue;
     border-radius: 15px;
 
     &::after {
       width: 8px;
       height: 8px;
       margin: auto;
-      background-color: #eef2f7;
+      background-color: @blue;
       border-radius: 4px;
       content: '';
     }
@@ -433,11 +471,11 @@ body {
   }
 
   &__input:checked ~ &__icon {
-    background-color: #ffdd2d;
+    background-color: @yellow;
     transition: background-color 0.1s ease-in;
 
     &::after {
-      background-color: #3e4757;
+      background-color: @grey;
       transition: background-color 0.1s ease-in;
     }
   }
@@ -449,11 +487,11 @@ body {
   height: 66px;
   border: 0;
   margin: 50px 0 0;
-  font-family: Roboto, sans-serif;
-  font-size: 17px;
-  color: #333;
-  background-color: #ffdd2d;
-  border-radius: 6px;
+  font-family: @font, sans-serif;
+  font-size: @medium-2;
+  color: @black;
+  background-color: @yellow;
+  border-radius: @border-radius;
   cursor: pointer;
 }
 
@@ -475,7 +513,7 @@ body {
     &__phone {
       width: 140px;
       height: 20px;
-      font-size: 17px;
+      font-size: @medium-2;
     }
   }
 
@@ -501,7 +539,7 @@ body {
   .wrapper {
     justify-content: center;
     height: 390px;
-    background-image: linear-gradient(179deg, #168de7, #00428a);
+    background-image: linear-gradient(179deg, @gradient-mobile-from, @gradient-mobile-to);
 
     &::before {
       position: absolute;
@@ -518,13 +556,13 @@ body {
   .main-message {
     z-index: 1;
     align-items: center;
-    width: 252px;
+    max-width: 252px;
     padding: 0;
     margin: 26px auto;
 
     &__header {
       width: 100%;
-      font-size: 30px;
+      font-size: @large-3;
       text-align: center;
       line-height: 1.2;
     }
@@ -532,13 +570,13 @@ body {
     &__description {
       width: 100%;
       margin: 7px 0 141px;
-      font-size: 17px;
+      font-size: @medium-2;
       text-align: center;
       line-height: 1.41;
     }
 
     &__button {
-      width: 252px;
+      max-width: 252px;
       height: 66px;
     }
   }
@@ -548,23 +586,23 @@ body {
     &_tags {
       line-height: 1.2;
       margin: 29px auto 24px;
-      font-size: 30px;
+      font-size: @large-3;
     }
 
     &_form {
       line-height: normal;
       margin: 52px auto 26px;
-      font-size: 24px;
+      font-size: @large-2;
     }
   }
 
   .tags {
 
     &__item {
-      max-width: 250px;
+      max-width: 244px;
 
       &::after {
-        left: 196px;
+        left: 192px;
       }
     }
   }
@@ -589,6 +627,6 @@ body {
 
   .form-radio,
   .form-button {
-    width: 288px;
+    max-width: 288px;
   }
 }
