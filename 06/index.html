@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Карты для вас прямо сейчас</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css">
+    <link rel="stylesheet/less" type="text/css" href="less/main.less">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo"></div>
+      <div class="header__phone">8 800 555-11-22</div>
+    </header>
+    <nav class="nav">
+      <ul class="menu">
+        <li class="menu__item">Карты</li>
+        <li class="menu__item">Вклады</li>
+        <li class="menu__item">Платежи и переводы</li>
+        <li class="menu__item">Бонусы</li>
+        <li class="menu__item">Страхование</li>
+        <li class="menu__item">О банке</li>
+      </ul>
+    </nav>
+    <div class="wrapper">
+      <div class="main-message">
+        <h1 class="main-message__header">Карты для вас прямо сейчас</h1>
+        <p class="main-message__description">Выбирайте карту, пользуйтесь<br>удобными сервисами</p>
+        <button class="main-message__button">Оформить заявку</button>
+      </div>
+    </div>
+    <h2 class="subheader_tags">Любые категории платежей</h2>
+    <div class="tags-container">
+      <ul class="tags">
+        <li class="tags__item">Кафе</li>
+        <li class="tags__item_editable" contenteditable></li>
+        <li class="tags__item">Интернет</li>
+        <li class="tags__item_editable" contenteditable></li>
+        <li class="tags__item">Телефон</li>
+        <li class="tags__item_editable" contenteditable></li>
+        <li class="tags__item">Авто</li>
+        <li class="tags__item_editable" contenteditable></li>
+        <li class="tags__item">ЖКХ</li>
+        <li class="tags__item_editable" contenteditable></li>
+        <li class="tags__item">Одежда и обувь</li>
+        <li class="tags__item_editable" contenteditable></li>
+        <li class="tags__item">Супермаркеты, гастрономы, универмаги и к</li>
+        <li class="tags__item_editable" contenteditable></li>
+      </ul>
+    </div>
+    <h2 class="subheader_form">Заполните несколько простых полей</h2>
+    <form class="form">
+      <label class="form-text_select">
+        <input class="form-text__input" type="text" name="name" required>
+        <span class="form-text__hint">ФИО</span>
+        <span class="form-text__gradient"></span>
+        <span class="form-text__icon"></span>
+      </label>
+      <label class="form-text_error">
+        <input class="form-text__input" type="text" name="city" required>
+        <span class="form-text__hint">Город проживания</span>
+        <span class="form-text__gradient"></span>
+        <span class="form-text__icon"></span>
+      </label>
+      <label class="form-text">
+        <input class="form-text__input" type="text" name="phone" required>
+        <span class="form-text__hint">Мобильный телефон</span>
+        <span class="form-text__gradient"></span>
+      </label>
+      <label class="form-text_info">
+        <input class="form-text__input" type="text" name="email" required>
+        <span class="form-text__hint">Электронная почта</span>
+        <span class="form-text__gradient"></span>
+        <span class="form-text__icon"></span>
+        <span class="form-text__helping-message">Ваши данные замаскированы в&nbsp;целях безопасности. Для изменения информации с&nbsp;вами свяжется оператор колл-центра.</span>
+      </label>
+      <h3 class="form-subheader">Выберите это&nbsp;или другое</h3>
+      <div class="form-radio-wrapper">
+        <label class="form-radio">
+          <input class="form-radio__input" type="radio" name="what" value="on" checked required>
+          <span class="form-radio__text">Это</span>
+          <span class="form-radio__icon"></span>
+        </label>
+        <label class="form-radio">
+          <input class="form-radio__input" type="radio" name="what" value="off" required>
+          <span class="form-radio__text">Другое</span>
+          <span class="form-radio__icon"></span>
+        </label>
+      </div>
+      <input class="form-button" type="submit">
+    </form>
+  </body>
+  <!-- TODO
+    Добавить переменные
+    Добавить примеси border-radius
+    Чекнуть font-weight в description
+    Чекнуть pixel-perfect
+    Стили кнопки при наведении и нажатии
+    Сделать цвет кнопочке разный
+    Не забыть убрать все TODO
+  -->
+</html>
