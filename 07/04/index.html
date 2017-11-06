@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet/less" type="text/css" href="./main.less" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js" ></script>
+    <script src="./main.js" ></script>
+    <title>Задание 7.4</title>
+</head>
+<body>
+<h1>Скроллинг с подгрузкой</h1>
+<p>
+    Реализовать скроллинг с подргузкой содержимого при достижении нижней части страницы.
+
+    В качестве источника содержимого используйте github и список репозиториев facebook.
+    Для того, чтобы поиграться с API и возвращаемым содержимым, в консоли можете использовать следующие утилиты httpie и jq:
+    <br>
+    <code>http -p b "https://api.github.com/orgs/facebook/repos?page=1" | jq 'length'</code>
+    <br>
+    Нужно выводить список репозиториев (для каждого название, описание, ссылку, дату создания и дату последнего коммита).
+    Дизайн страницы - на ваш вкус.
+</p>
+</body>
+</html>

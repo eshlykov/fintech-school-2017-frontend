@@ -188,7 +188,7 @@
     "import/default": 2,
     "import/prefer-default-export": 1,
     "import/newline-after-import": 0, // включить, как починят баг
-    "import/unambiguous": 1,
+    "import/unambiguous": 0,
     "import/no-webpack-loader-syntax": 1,
     "import/extensions": [1, "always", {
       "js": "never"
