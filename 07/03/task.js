@@ -3,8 +3,16 @@
  * Доп. задание: предложите несколько вариантов решения.
  */
 function throttle(time, callback) {
-  return callback;
-}
+  let prevInvokeTime = -time;
 
+  return () => {
+    const invokeTime = Date.now();
+
+    if (invokeTime - prevInvokeTime > time) {
+      prevInvokeTime = invokeTime;
+      callback();
+    }
+  };
+}
 
 module.exports = { throttle };
