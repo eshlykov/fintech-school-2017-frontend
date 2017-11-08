@@ -5,12 +5,12 @@
 function throttle(time, callback) {
   let prevInvokeTime = -time;
 
-  return () => {
+  return (...args) => {
     const invokeTime = Date.now();
 
     if (invokeTime - prevInvokeTime > time) {
       prevInvokeTime = invokeTime;
-      callback();
+      callback(...args);
     }
   };
 }
