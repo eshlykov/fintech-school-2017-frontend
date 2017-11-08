@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  font-family: Consolas, monospace;
+}
+
+body {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.list {
+  padding: 0;
+}
+
+.repo {
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+  border: 1px solid #808080;
+  margin: 12px auto;
+  border-radius: 6px;
+  max-width: 80%;
+
+  &__name {
+    padding: 0 0 0 18px;
+    font-weight: bold;
+  }
+
+  &__description {
+    color: #333;
+  }
+
+  &__date,
+  &__commit {
+    padding: 0 0 0 9px;
+    font-size: 0.8rem;
+    color: #666;
+  }
+}
