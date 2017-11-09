@@ -22,8 +22,8 @@
     "mocha": "^3.5.0"
   },
   "devDependencies": {
-    "html-validator": "^2.2.3",
     "babel-eslint": "^8.0.1",
+    "html-validator": "^2.2.3",
     "stylelint": "^8.2.0",
     "stylelint-config-standard": "^17.0.0"
   }
