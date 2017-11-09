@@ -1,4 +1,5 @@
 const input = document.querySelector('.tel');
+const link = document.querySelector('.link');
 
 const isCodeOfDigit = n => (n >= 48 && n <= 57) || (n >= 96 && n <= 105);
 
@@ -8,6 +9,8 @@ const isCodeOfDelete = n => n === 46;
 
 const isCodeOfFuncKey = n => (n <= 7) || (n >= 9 && n <= 31) || (n >= 33 && n <= 45) || (n >= 91 && n <= 94)
                              || (n >= 112 && n <= 135) || n === 144 || n === 145;
+
+const isDigit = c => c.length === 1 && c >= '0' && c <= '9';
 
 function printKey(key) {
   const value = this.value;
@@ -39,18 +42,26 @@ function removePrev() {
   this.setSelectionRange(next, next);
 }
 
-function ignoreNotDigits(event) {
-  if (isCodeOfFuncKey(event.keyCode)) {
-    return;
-  }
-  event.preventDefault();
+function renderLink() {
+  console.log('key');
+  const tel = input.value.split('').filter(isDigit).join('');
+  link.textContent = `Позвонить на ${input.value}`;
+  link.setAttribute('href', `tel:${tel}`);
+  link.classList.toggle('shown', tel.length === 11);
+}
 
-  if (isCodeOfDigit(event.keyCode)) {
-    printKey.apply(this, [event.key]);
-  } else if (isCodeOfDelete(event.keyCode)) {
-    printKey.apply(this, ['_']);
-  } else if (isCodeOfBackspace(event.keyCode)) {
-    removePrev.apply(this);
+function ignoreNotDigits(event) {
+  console.log(event);
+  if (!isCodeOfFuncKey(event.keyCode)) {
+    event.preventDefault();
+    if (isCodeOfDigit(event.keyCode)) {
+      printKey.apply(this, [event.key]);
+    } else if (isCodeOfDelete(event.keyCode)) {
+      printKey.apply(this, ['_']);
+    } else if (isCodeOfBackspace(event.keyCode)) {
+      removePrev.apply(this);
+    }
+    renderLink();
   }
 }
 
