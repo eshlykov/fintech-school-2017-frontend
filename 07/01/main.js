@@ -43,15 +43,14 @@ function removePrev() {
 }
 
 function renderLink() {
-  console.log('key');
   const tel = input.value.split('').filter(isDigit).join('');
+  
   link.textContent = `Позвонить на ${input.value}`;
   link.setAttribute('href', `tel:${tel}`);
   link.classList.toggle('shown', tel.length === 11);
 }
 
 function ignoreNotDigits(event) {
-  console.log(event);
   if (!isCodeOfFuncKey(event.keyCode)) {
     event.preventDefault();
     if (isCodeOfDigit(event.keyCode)) {
