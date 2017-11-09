@@ -10,6 +10,7 @@ describe('throttle', () => {
 
     const wrapperFunction = throttle(intervalTime, () => {
       const currentTime = Date.now();
+      
       console.log(currentTime);
 
       invokeCount += 1;

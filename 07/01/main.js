@@ -44,7 +44,7 @@ function removePrev() {
 
 function renderLink() {
   const tel = input.value.split('').filter(isDigit).join('');
-  
+
   link.textContent = `Позвонить на ${input.value}`;
   link.setAttribute('href', `tel:${tel}`);
   link.classList.toggle('shown', tel.length === 11);
