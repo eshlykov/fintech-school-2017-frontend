@@ -3,13 +3,12 @@
  * Доп. задание: предложите несколько вариантов решения.
  */
 function throttle(time, callback) {
-  let canBeInvoked = true;
+  let lastInvoked = 0;
 
   return (...args) => {
-    if (canBeInvoked) {
-      canBeInvoked = false;
+    if (Date.now() - lastInvoked > time) {
       callback(...args);
-      setTimeout(() => { canBeInvoked = true; }, time);
+      lastInvoked = Date.now();
     }
   };
 }
