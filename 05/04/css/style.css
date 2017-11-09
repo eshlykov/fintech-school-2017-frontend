@@ -1,0 +1,213 @@
+body {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 0 270px;
+}
+
+.form-text-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-bottom: 24px;
+}
+
+.form-text {
+  display: flex;
+  align-self: stretch;
+  height: 20px;
+  padding: 32px 18px 14px;
+  border: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 17px;
+  text-align: left;
+  color: #333;
+  background-color: #eef2f7;
+  border-radius: 6px;
+}
+
+.form-text-hint {
+  position: absolute;
+  left: 18px;
+  top: 23px;
+  font-family: Roboto, sans-serif;
+  font-size: 17px;
+  text-align: left;
+  opacity: 0.6;
+  color: #74a3c7;
+}
+
+.form-image-arrow {
+  position: absolute;
+  right: 18px;
+  top: 31px;
+}
+
+.form-image-info {
+  position: absolute;
+  right: 18px;
+  top: 21px;
+}
+
+.form-text-error-message {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  display: none;
+  height: 15px;
+  margin: 11px 0 4px;
+  font-family: Roboto;
+  font-size: 13px;
+  color: #d0021b;
+}
+
+.form-image-info.error {
+  display: none;
+}
+
+.failed:valid ~ .form-image-info.error {
+  display: flex;
+}
+
+.failed:valid {
+  border: solid 1px #d0011b;
+}
+
+.form-text-error-message.failed:valid ~ .form-text-error-message {
+  display: flex;
+}
+
+.failed:valid ~ .form-text-error-message {
+  display: flex;
+}
+
+.form-text:focus {
+  background-color: #fff;
+}
+
+.form-text:focus ~ .form-text-hint,
+.form-text:valid ~ .form-text-hint {
+  top: 12px;
+  font-size: 13px;
+}
+
+.form-text-info {
+  position: absolute;
+  right: 54px;
+  top: -19px;
+  display: none;
+  width: 252px;
+  height: 72px;
+  padding: 16px;
+  border-radius: 6px;
+  font-family: Roboto;
+  font-size: 13px;
+  line-height: 1.38;
+  color: #9299a2;
+  background-color: #fff;
+  border: solid 1px #dddfe0;
+}
+
+.form-image-info:hover + .form-text-info {
+  display: flex;
+}
+
+.form-radio-header {
+  margin: 15px auto 27px;
+  font-family: Roboto, sans-serif;
+  font-size: 21px;
+  font-weight: 300;
+  text-align: center;
+  color: #333;
+}
+
+.form-radio-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.form-radio-label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 220px;
+  height: 64px;
+  padding: 0 18px;
+  border: solid 1px #dddfe0;
+  font-family: Roboto, sans-serif;
+  font-size: 17px;
+  color: #333;
+  background-color: #fff;
+  border-radius: 6px;
+}
+
+.form-radio-text {
+  font-family: Roboto, sans-serif;
+  font-size: 17px;
+  color: #74a3c7;
+  opacity: 0.6;
+}
+
+.form-radio:checked ~ .form-radio-text {
+  color: #333;
+  opacity: 1;
+}
+
+.form-radio {
+  position: absolute;
+  left: 210px;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  opacity: 0;
+}
+
+.form-radio-exterior {
+  position: absolute;
+  z-index: 1;
+  left: 210px;
+  width: 30px;
+  height: 30px;
+  background: #eef2f7;
+  border-radius: 15px;
+}
+
+.form-radio-interior {
+  position: absolute;
+  left: 221px;
+  z-index: 2;
+  display: none;
+  width: 8px;
+  height: 8px;
+  background: #3e4757;
+  border-radius: 4px;
+}
+
+.form-radio:checked ~ .form-radio-exterior {
+  background: #ffdd2d;
+}
+
+.form-radio:checked ~ .form-radio-interior {
+  display: flex;
+}
+
+.form-button {
+  align-self: center;
+  width: 258px;
+  height: 66px;
+  border: 0;
+  margin: 50px 0 0;
+  font-family: Roboto, sans-serif;
+  font-size: 17px;
+  color: #333;
+  background-color: #ffdd2d;
+  border-radius: 6px;
+}
