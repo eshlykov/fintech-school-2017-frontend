@@ -3,7 +3,7 @@
  * Доп. задание: предложите несколько вариантов решения.
  */
 function throttle(time, callback) {
-  let lastInvoked = -time;
+  let lastInvoked = 0;
 
   return (...args) => {
     if (Date.now() - lastInvoked > time) {
