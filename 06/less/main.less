@@ -44,6 +44,25 @@
   cursor: pointer;
 }
 
+.button {
+  border: 0;
+  font-family: @font, sans-serif;
+  font-size: @medium-2;
+  color: @black;
+  text-align: center;
+  background-color: @yellow;
+  border-radius: @border-radius;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken(@yellow, 10%);
+  }
+
+  &:active {
+    background-color: saturate(@yellow, 10%);
+  }
+}
+
 body {
   max-width: 1080px;
   margin: 0 auto;
@@ -164,18 +183,11 @@ body {
   }
 
   &__button {
+    .button;
     width: 212px;
     height: 62px;
-    border: 0;
     margin: 0;
-    font-family: @font, sans-serif;
-    font-size: @medium-2;
     line-height: 1.41;
-    color: @black;
-    text-align: center;
-    background-color: @yellow;
-    border-radius: @border-radius;
-    cursor: pointer;
   }
 }
 
@@ -482,17 +494,11 @@ body {
 }
 
 .form-button {
+  .button;
   align-self: center;
   width: 258px;
   height: 66px;
-  border: 0;
   margin: 50px 0 0;
-  font-family: @font, sans-serif;
-  font-size: @medium-2;
-  color: @black;
-  background-color: @yellow;
-  border-radius: @border-radius;
-  cursor: pointer;
 }
 
 @media (max-width: 640px) {
