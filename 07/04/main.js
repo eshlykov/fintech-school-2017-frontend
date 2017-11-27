@@ -37,9 +37,8 @@ const removeReposLoading = () => {
 const checkResponse = response => {
   if (response.status === 200) {
     return Promise.resolve(response);
-  } else {
-    return Promise.reject(new Error(response.statusText));
   }
+  return Promise.reject(new Error(response.statusText));
 };
 
 function onScrollBody() {
