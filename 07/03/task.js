@@ -3,8 +3,14 @@
  * Доп. задание: предложите несколько вариантов решения.
  */
 function throttle(time, callback) {
-  return callback;
-}
+  let lastInvoked = 0;
 
+  return (...args) => {
+    if (Date.now() - lastInvoked > time) {
+      callback(...args);
+      lastInvoked = Date.now();
+    }
+  };
+}
 
 module.exports = { throttle };
