@@ -22,7 +22,7 @@ const renderRepo = repoObject => {
   return repo;
 };
 
-const renderRepos = data => {
+const renderAllRepos = data => {
   for (const repo of data) {
     list.appendChild(renderRepo(repo));
   }
@@ -30,42 +30,15 @@ const renderRepos = data => {
   loaded = true;
 };
 
-function makeGetRequest(url, successCallback, errorCallback) {
-  const xhr = new XMLHttpRequest();
-
-  xhr.open('GET', url, true);
-
-  xhr.onreadystatechange = () => {
-    if (xhr.readyState !== 4) {
-      return;
-    }
-    if (xhr.status !== 200) {
-      const error = new Error(`Error: ${xhr.status}`);
-
-      error.code = xhr.statusText;
-      errorCallback(error);
-    } else {
-      successCallback(xhr.responseText);
-    }
-  };
-
-  xhr.send();
-}
-
 const removeReposLoading = () => {
   document.removeEventListener('scroll', onScrollBody);
 };
 
-const parseResponse = text => {
-  let data;
-
-  try {
-    data = JSON.parse(text);
-  } catch (error) {
-    removeReposLoading();
-  }
-  if (data) {
-    renderRepos(data);
+const checkResponse = response => {
+  if (response.status === 200) {
+    return Promise.resolve(response);
+  } else {
+    return Promise.reject(new Error(response.statusText));
   }
 };
 
@@ -78,10 +51,11 @@ function onScrollBody() {
   }
   loaded = false;
 
-  makeGetRequest(`https://api.github.com/orgs/facebook/repos?page=${pageNumber}`,
-    parseResponse,
-    removeReposLoading
-  );
+  fetch(`https://api.github.com/orgs/facebook/repos?page=${pageNumber}`, { method: 'GET' })
+    .then(checkResponse)
+    .then(response => response.json())
+    .then(renderAllRepos)
+    .catch(removeReposLoading);
 }
 
 document.addEventListener('scroll', onScrollBody);
