@@ -2,8 +2,16 @@
  * Исправьте проблему с таймером: должны выводиться числа от 0 до 9.
  * Доп. задание: предложите несколько вариантов решения.
  */
-function timer(logger = console.log) {
-  for (var i = 0; i < 10; i++) {
+function timer1(logger = console.log) {
+  for (var i = 0; i < 10; ++i) {
+    setTimeout(x => {
+      logger(x);
+    }, 100, i);
+  }
+}
+
+function timer2(logger = console.log) {
+  for (let i = 0; i < 10; ++i) {
     setTimeout(() => {
       logger(i);
     }, 100);
@@ -20,7 +28,9 @@ function timer(logger = console.log) {
  * @return {Function} функция с нужным контекстом
  */
 function customBind(func, context, ...args) {
-
+  return function binded(...added) {
+    return func.apply(context, args.concat(added));
+  };
 }
 
 /*= ============================================ */
@@ -33,19 +43,37 @@ function customBind(func, context, ...args) {
  * sum :: void -> Number
  */
 function sum(x) {
-  return 0;
+  let currentSum = 0;
+
+  return (function count(y) {
+    if (y === undefined) {
+      return currentSum;
+    }
+
+    currentSum += y;
+    return count;
+  }(x));
 }
 
 /*= ============================================ */
 
 /**
- * Определите, являются ли строчки анаграммами (например, “просветитель” — “терпеливость”).
+ * Определите, являются ли строчки анаграммами (например, “” — “терпеливость”).
  * @param {string} first
  * @param {string} second
  * @return {boolean}
  */
 function anagram(first, second) {
-  return false;
+  if (first.length !== second.length) {
+    return false;
+  }
+
+  const chars = {};
+
+  [...first].forEach(char => { chars[char] = (chars[char] || 0) + 1; });
+  [...second].forEach(char => { chars[char] = (chars[char] || 0) - 1; });
+
+  return Object.keys(chars).map(key => chars[key]).every(number => number === 0);
 }
 
 /*= ============================================ */
@@ -57,7 +85,11 @@ function anagram(first, second) {
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
 function getUnique(arr) {
-  return [];
+  const items = {};
+
+  arr.forEach(item => { items[item] = null; });
+
+  return Object.keys(items).sort((a, b) => a - b);
 }
 
 /**
@@ -67,7 +99,19 @@ function getUnique(arr) {
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
 function getIntersection(first, second) {
-  return [];
+  const inFirst = {};
+  const result = [];
+
+  first.forEach(item => { inFirst[item] = (inFirst[item] || 0) + 1; });
+
+  second.forEach(item => {
+    if (inFirst[item] > 0) {
+      inFirst[item] -= 1;
+      result.push(item);
+    }
+  });
+
+  return result.sort((a, b) => a - b);
 }
 
 /* ============================================= */
@@ -86,11 +130,26 @@ function getIntersection(first, second) {
  * @return {boolean}
  */
 function isIsomorphic(left, right) {
+  if (left.length !== right.length) {
+    return false;
+  }
 
+  let different = 0;
+
+  for (let i = 0; i <= left.length; ++i) {
+    if (left[i] !== right[i]) {
+      different += 1;
+    }
+    if (different > 1) {
+      return false;
+    }
+  }
+
+  return true;
 }
-
 module.exports = {
-  timer,
+  timer1,
+  timer2,
   customBind,
   sum,
   anagram,
